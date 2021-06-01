@@ -12,7 +12,7 @@
 public class MergeTwoLists {
 
     /**
-     * This is an <b>Itterative</b> method
+     * This is an <b>Iterative</b> method
      * This is also an in-place method
      *
      * We have a method 2 whose only function is to decide the head of the list and
@@ -79,7 +79,7 @@ public class MergeTwoLists {
         return l1;
     }
 
-    public static SLL.Node method2(SLL.Node l1, SLL.Node l2) {
+    public static SLL.Node method1(SLL.Node l1, SLL.Node l2) {
         if(l1 == null)
             return l2;
         if(l2 == null)
@@ -106,15 +106,15 @@ public class MergeTwoLists {
      * @param l2 The parameter is used to point at the head of the second sorted linked list
      * @return SLL.Node returns the head pointer of the sorted and merged linked list.
      */
-    public static SLL.Node method3(SLL.Node l1, SLL.Node l2) {
+    public static SLL.Node method2(SLL.Node l1, SLL.Node l2) {
         if(l1 == null)
             return l2;
         if(l2 == null)
             return l1;
         SLL.Node head, right = l2, left = l1;
         head = (right.data <= left.data) ? right: left;
-        if(right.data <= left.data) right.next = method3(right.next, left);
-        else if(right.data > left.data) left.next = method3(right, left.next);
+        if(right.data <= left.data) right.next = method2(right.next, left);
+        else if(right.data > left.data) left.next = method2(right, left.next);
         return head;
     }
 
