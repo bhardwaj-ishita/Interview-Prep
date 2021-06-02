@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
  * @since   2021-06-01
  * */
 
-public class IslandProblem {
+public class LCIslandProblem {
 
     //User Defined Fastreader class
     static class Fastreader {
