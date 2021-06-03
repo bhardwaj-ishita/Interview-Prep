@@ -1,3 +1,21 @@
+/**
+ * <h1>Interleaving Strings</h1>
+ * https://leetcode.com/problems/interleaving-string/
+ *
+ * Given strings s1, s2, and s3, find whether s3 is formed by an interleaving of s1 and s2.
+ *
+ * An interleaving of two strings s and t is a configuration where they are divided into non-empty substrings such that:
+ *
+ * s = s1 + s2 + ... + sn
+ * t = t1 + t2 + ... + tm
+ * |n - m| <= 1
+ * The interleaving is s1 + t1 + s2 + t2 + s3 + t3 + ... or t1 + s1 + t2 + s2 + t3 + s3 + ...
+ * Note: a + b is the concatenation of strings a and b.
+ *
+ * @author Ishita Bhardwaj
+ * @version 11.01
+ * @since   2021-06-2
+ * */
 public class LCInterleavingString {
 
     public static boolean solution(String s1, int i, String s2, int j, String sol, String s3) {
@@ -28,35 +46,3 @@ public class LCInterleavingString {
         System.out.println(isInterleave(s1,s2,s3));
     }
 }
-/*
-if(s3.length() != (s1.length() + s2.length())) return false;
-        if(s1.length() == 0 && s2.length() == 0) return true;
-
-
-        int p1 = 0, p2 = 0, p3 = 0;
-        boolean space = true;
-        while(p3 != s3.length()) {
-            //System.out.println("s1: " + s1 + " s2: " + s2 + " s3: " + s3);
-            if(p1 < s1.length() && s3.charAt(p3) == s1.charAt(p1)) {
-                while(p1 < s1.length() && s3.charAt(p3) == s1.charAt(p1)) {
-                    //System.out.println("s1: " + p1);
-                    p1++;
-                    p3++;
-                }
-            }
-            else if(p2 < s2.length() && s3.charAt(p3) == s2.charAt(p2)) {
-                while(p2 < s2.length() && s3.charAt(p3) == s2.charAt(p2)) {
-                    //System.out.println("s2: " + p2);
-                    p2++;
-                    p3++;
-                }
-
-            }
-            else{
-                space = false;
-                break;
-            }
-        }
-        if(!space) return false;
-        return true;
- */
