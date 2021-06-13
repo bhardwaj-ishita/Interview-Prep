@@ -36,6 +36,30 @@ public class ReverseSubList {
     }
 
     /**
+     * This method uses <b>Recursion</b> and backtracking
+     * Keep moving the left pointer until it reaches the lth position
+     * And at every move call the function back to and move the right pointer until it reaches at the rth position
+     * When the pointer has reached the required positions and the recursive function unravels, interchange the values
+     * When the right and the left pointer are equal or have crossed each other, return the function
+     * Time Complexity: O(N) since we process all the nodes at-most twice.
+     *      Once during the normal recursion process and once during the backtracking process.
+     *      During the backtracking process we only just swap half of the list if you think about it,
+     *      but the overall complexity is O(N).
+     * Space Complexity: O(N) in the worst case when we have to reverse the entire list.
+     *      This is the space occupied by the recursion stack.
+     * @param head The parameter is used to point at the head of an input linked list
+     * @param l the node at the left where we need to reverse the list
+     * @param r the node at the right side of left node till where we need to reverse the list
+     * @return SLL.Node sends the head of the list back
+     */
+    public static SLL.Node method1(SLL.Node head, int l,int r) {
+        left = head;
+        stop = false;
+        reverse(head,l,r);
+        return head;
+    }
+
+    /**
      * This method uses <b>Iterative link reversal</b>.
      * we move prev and curr to l until we've reached the required position
      * prev take cares for the node before curr
@@ -52,13 +76,6 @@ public class ReverseSubList {
      * @param r the node at the right side of left node till where we need to reverse the list
      * @return SLL.Node sends the head of the list back
      */
-    public static SLL.Node method1(SLL.Node head, int l,int r) {
-        left = head;
-        stop = false;
-        reverse(head,l,r);
-        return head;
-    }
-
     public static SLL.Node method2(SLL.Node head, int l,int r) {
         SLL.Node con, tail, prev = null, curr = head, temp;
         while(l>1) {

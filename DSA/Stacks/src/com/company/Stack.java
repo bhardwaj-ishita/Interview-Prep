@@ -3,6 +3,9 @@ package com.company;
 public class Stack {
     StackNode root;
 
+    public void push(long l) {
+    }
+
     static class StackNode {
         int data;
         StackNode next;
@@ -64,6 +67,6 @@ public class Stack {
         System.out.println("Is the stack empty: " + s.isEmpty());
         System.out.println(s.peek());
         s.printStack();
-        }
+    }
 
 }
