@@ -29,10 +29,7 @@ public class ValidStackSequence {
         int i = 0, j = 0;
         while(i < pushed.length && j < popped.length) {
             s.push(pushed[i++]);
-            System.out.println("i: " + i);
             while(!s.isEmpty() && s.peek() == popped[j]) {
-                System.out.println("j: " + j);
-                System.out.println("popped: " + s.peek());
                 s.pop();
                 j++;
             }
