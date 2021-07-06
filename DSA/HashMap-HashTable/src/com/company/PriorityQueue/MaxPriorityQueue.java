@@ -1,11 +1,87 @@
 package com.company.PriorityQueue;
 
-import com.company.PriorityQueue.MaxHeap;
+import java.util.Vector;
 
-public class MaxPriorityQueue extends MaxHeap {
+public class MaxPriorityQueue {
+
+    public Vector<Integer> A;
+
+    public MaxPriorityQueue() {
+        A = new Vector<>();
+    }
+
+    public MaxPriorityQueue(int capacity) {
+        A = new Vector<>(capacity);
+    }
+
+    //return parent of i
+    public int parent(int i) {
+        if(i==0) return 0;
+        return (i-1)/2;
+    }
+
+    //return left child of i
+    public int LEFT(int i) {
+        return (2*i + 1);
+    }
+
+    //return right child
+    public int RIGHT(int i) {
+        return (2*i + 2);
+    }
+
+    //swap value of two indexes
+    public void swap(int x, int y) {
+        Integer temp = A.get(x);
+        A.setElementAt(A.get(y), x);
+        A.setElementAt(temp,y);
+    }
+
+    public int size() {
+        return A.size();
+    }
+
+    public boolean isEmpty() {
+        return A.isEmpty();
+    }
+
+    public boolean contains(int i) {
+        return A.contains(i);
+    }
+
+    public Integer[] toArray() {
+        return A.toArray(new Integer[size()]);
+    }
+
+    public void heapify_up(int i) {
+        if(i == 0) return;
+        System.out.println("heapifying at i");
+        if(i > 0 && A.get(i) < A.get(parent(i))) swap(i, parent(i));
+        heapify_up(parent(i));
+    }
+
+    public void heapify_down(int i) {
+        int left = LEFT(i);
+        int right = RIGHT(i);
+        int largest = i;
+
+        if (i > 0 && A.get(i) < A.get(left)) largest = left;
+        if (i > 0 && A.get(left) < A.get(right)) largest = right;
+
+        if (largest != i) {
+            swap(i, largest);
+            heapify_down(largest);
+        }
+    }
+
     public void add(Integer key) {
+        if(A.isEmpty()) {
+            A.addElement(key);
+            return;
+        }
         A.addElement(key);//add the key in the vector
         int index = size() - 1;//give it the last index
+        System.out.println("added key");
         heapify_up(index);//heapify it towards the top to make a valid heap
     }
 
