@@ -1,4 +1,4 @@
-package com.company;
+package com.company.BinaryTrees;
 
 public class BinaryTreeSize {
     public static class Node{
