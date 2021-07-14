@@ -31,7 +31,7 @@ public class BTPaths {
 
         //STRING
         public static List<String> byString(Node root) {
-            List<String> list = new ArrayList<String>();
+            List<String> list = new ArrayList<>();
             if(root != null) pathway(root,"",list);
             return list;
 
@@ -45,7 +45,7 @@ public class BTPaths {
 
         //STRING BUILDER
         public static List<String> bySB(Node root) {
-            List<String> list = new ArrayList<String>();
+            List<String> list = new ArrayList<>();
             StringBuilder sb = new StringBuilder();
             if(root != null) pathway(root,sb,list);
             return list;
