@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c0289d7-25d6-4535-b778-f0ee89f3f048" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1tLhvsa1mUW2CxB5IinSZdSR0PB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DSA/LinkedList/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ishita\Github\Interview-Prep\DSA\Stacks\src\com\company" />
+      <recent name="D:\Ishita\Github\Interview-Prep\DSA\Stacks\src" />
+      <recent name="D:\Ishita\Github\Interview-Prep\DSA" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ReverseSubList">
+    <configuration name="Intersection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Intersection" />
+      <module name="Interview-Prep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LCInterleavingString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LCInterleavingString" />
+      <module name="Interview-Prep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LCMaxAreaCuts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LCMaxAreaCuts" />
+      <module name="Interview-Prep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NextGreater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NextGreater" />
+      <module name="Interview-Prep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseSubList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReverseSubList" />
+      <module name="Interview-Prep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LCInterleavingString" />
+      <item itemvalue="Application.LCMaxAreaCuts" />
+      <item itemvalue="Application.NextGreater" />
+      <item itemvalue="Application.Intersection" />
+      <item itemvalue="Application.ReverseSubList" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReverseSubList" />
+        <item itemvalue="Application.Intersection" />
+        <item itemvalue="Application.NextGreater" />
+        <item itemvalue="Application.LCMaxAreaCuts" />
+        <item itemvalue="Application.LCInterleavingString" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c0289d7-25d6-4535-b778-f0ee89f3f048" name="Default Changelist" comment="" />
+      <created>1622554510881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622554510881</updated>
+      <workItem from="1622554514013" duration="71000" />
+      <workItem from="1622554624027" duration="7388000" />
+      <workItem from="1622615053130" duration="6452000" />
+      <workItem from="1622630949220" duration="4787000" />
+      <workItem from="1622650019907" duration="6763000" />
+      <workItem from="1622704011011" duration="35000" />
+      <workItem from="1622720882751" duration="1158000" />
+      <workItem from="1622736145234" duration="357000" />
+      <workItem from="1622789358088" duration="1657000" />
+      <workItem from="1622801999875" duration="2346000" />
+      <workItem from="1623481529834" duration="7101000" />
+      <workItem from="1623498466216" duration="3943000" />
+      <workItem from="1623568842734" duration="1800000" />
+      <workItem from="1623573305238" duration="408000" />
+      <workItem from="1623573759612" duration="59000" />
+      <workItem from="1623862599976" duration="254000" />
+      <workItem from="1623869151940" duration="161000" />
+      <workItem from="1626020407059" duration="304000" />
+    </task>
+    <task id="LOCAL-00001" summary="Remove Duplicates">
+      <created>1622560475269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622560475270</updated>
+    </task>
+    <task id="LOCAL-00002" summary="previous day">
+      <created>1622721012178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622721012178</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new day">
+      <created>1622721981990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622721981990</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new day again">
+      <created>1622722013368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622722013368</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new day again">
+      <created>1622722039538</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622722039538</updated>
+    </task>
+    <task id="LOCAL-00006" summary="nextGreater">
+      <created>1622805557479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622805557479</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2 questions">
+      <created>1623504425851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623504425851</updated>
+    </task>
+    <task id="LOCAL-00008" summary="hashmap and hashtable">
+      <created>1623869173738</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623869173738</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".md files added and Tree">
+      <created>1626020493608</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626020493608</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Remove Duplicates" />
+    <MESSAGE value="previous day" />
+    <MESSAGE value="new day" />
+    <MESSAGE value="new day again" />
+    <MESSAGE value="nextGreater" />
+    <MESSAGE value="2 questions" />
+    <MESSAGE value="hashmap and hashtable" />
+    <MESSAGE value=".md files added and Tree" />
+    <option name="LAST_COMMIT_MESSAGE" value=".md files added and Tree" />
+  </component>
+</project>

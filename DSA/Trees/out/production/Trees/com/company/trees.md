@@ -368,36 +368,3 @@ Complexity function T(n) — for all problem where tree traversal is involved �
 T(n) = T(k) + T(n – k – 1) + c
 Where k is the number of nodes on one side of root and n-k-1 on the other side.
 
-## binary search trees
-
-trees with max two child nodes
-with the right child greater than the parent node 
-and left child smaller thatn the parent node
-
-Searching a value:
-
-```java
-public class function{
-    public Node searchKey(Node root, int key) {
-        if(root==null || root.data == key) return root;
-        
-        if(key > root.data) return searchKey(root.right, key);
-        return searchKey(root.left, key);
-    }
-}
-```
-
-Inserting a value:
-
-```java
-public class function{
-    public TreeNode insertIntoBST(TreeNode root, int val) {
-        if(root==null) return new TreeNode(val);
-        if(root.val < val) root.right = insertIntoBST(root.right, val);
-        else root.left = insertIntoBST(root.left, val);
-        return root;
-    }
-}
-```
-
-let's create a tree with 4 nodes like given above:
