@@ -77,7 +77,7 @@ The **Load factor** is a measure that decides when to increase the **HashMap** c
 - hm.put(key,value);
   - if the key is not in the hashmap then it will insert the new key
   - else if there is already a key as the input,  then it will update the value of the key
-- hm.contains(key)
+- hm.containsKey(key)
   - the return type is boolean
   - if the exists already then it will return true
   - else if it doesn’t exist then it will return false
