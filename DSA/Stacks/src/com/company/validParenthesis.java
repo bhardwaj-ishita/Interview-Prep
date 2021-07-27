@@ -87,10 +87,32 @@ public class validParenthesis {
         for(char c: s.toCharArray()) {
             if(c=='(') st.push(')');
             else if(c=='{') st.push('}');
-            else if(c==']') st.push(']');
+            else if(c=='[') st.push(']');
             else if(st.isEmpty() || st.pop() != c) return false;
         }
         return st.isEmpty();
+    }
+
+    public static boolean ispar(String x)
+    {
+        char[] c = x.toCharArray();
+        Stack<Character> s = new Stack<>();
+        int i = 0;
+        while(i < c.length) {
+            if(c[i] == '{' || c[i] == '[' || c[i] == '(') {
+                s.add(c[i]);
+                i++;
+                continue;
+            }
+            if(s.isEmpty()) return false;
+            if(c[i] == ')' && s.peek() == '(') s.pop();
+            else if(c[i] == '}' && s.peek() == '{') s.pop();
+            else if(c[i] == ']' && s.peek() == '[') s.pop();
+            else return false;
+            i++;
+        }
+
+        return s.isEmpty();
     }
 
     public static void main(String[] args) {
