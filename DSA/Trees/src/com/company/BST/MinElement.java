@@ -14,7 +14,7 @@ public class MinElement {
     class BinaryTree {
         Node root;
 
-        public static int minElement(Node node) {
+        public int minElement(Node node) {
             if(node==null) return Integer.MAX_VALUE;
             int ans = node.data;
             return Math.min(minElement(node.left),ans);

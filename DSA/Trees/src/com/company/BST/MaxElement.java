@@ -15,7 +15,7 @@ public class MaxElement {
     class BinaryTree {
         Node root;
 
-        public static int maxElement(Node node) {
+        public  int maxElement(Node node) {
             if(node==null) return Integer.MAX_VALUE;
             int ans = node.data;
             return Math.max(maxElement(node.right),ans);
