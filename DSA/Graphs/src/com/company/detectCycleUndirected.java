@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * only concern we have in undirected graph is that besides it's immediate parent if it is connected with
+ * a vertex which is already visited then it is in a cycle
+ */
 public class detectCycleUndirected {
 
     public boolean byDFS(int V, ArrayList<ArrayList<Integer>> adj)
