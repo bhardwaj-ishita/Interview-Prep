@@ -1,6 +1,6 @@
 package com.company;
 
-public class LongestIncreasingSubSeq {
+public class LISubsequence {
 
     /**
      * This is the bottom up dp approach.
