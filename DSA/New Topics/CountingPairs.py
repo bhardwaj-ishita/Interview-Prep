@@ -92,33 +92,53 @@ The left array will always be at a lower position than the right array i.e have 
 
 class Solution:
 
-    def merge(self, arr, target,count):
+    class Solution:
+    
+    def reversePairs(self, arr, target):
+        count = 0
         if len(arr) > 1:
             mid = len(arr)//2
             L = arr[:mid]
             R = arr[mid:]
-            count += self.merge(L)
-            count += self.merge(R)
-            
-            i,j,k = 0,0,0
-            while i < len(L) and j < len(R):
-                if L[i] <= target + R[j]:
-                    arr[k] = L[i]
-                    i += 1
-                    count += (len(R)-j)  #This is the most important line. This is the variation from CountInversion Question
-                else:
-                    arr[k] = R[j]
-                    j += 1    
-                k += 1
-            
-            while i < len(L):
-                arr[k] = L[i]
-                k += 1
-                i += 1   
+            count = self.reversePairs(L) 
+            count += self.reversePairs(R)
+            count += self.merge(L,R,arr,target)
+        return count
+    
+    def merge(self,L,R,arr,target):
+        #finding the count
+        count = 0
+        i,j = 0,0
+        while i < len(L):
             while j < len(R):
+                if L[i] > target + R[j]:
+                    j += 1
+                else:
+                    break
+            
+            count += len(R) - j
+            i += 1
+
+
+        #sorting
+        i,j,k = 0,0,0        
+        while i < len(L) and j < len(R):    
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1   
+            else:
                 arr[k] = R[j]
                 j += 1
-                k += 1
+            k += 1
+
+        while i < len(L):
+            arr[k] = L[i]
+            k += 1
+            i += 1   
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
                 
         return count
 
