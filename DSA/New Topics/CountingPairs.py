@@ -90,6 +90,38 @@ Now even though we are sorting the array, but we get to keep the count and the o
 The left array will always be at a lower position than the right array i.e have a lower index
 '''
 
+class Solution:
+
+    def merge(self, arr, target,count):
+        if len(arr) > 1:
+            mid = len(arr)//2
+            L = arr[:mid]
+            R = arr[mid:]
+            count += self.merge(L)
+            count += self.merge(R)
+            
+            i,j,k = 0,0,0
+            while i < len(L) and j < len(R):
+                if L[i] <= target + R[j]:
+                    arr[k] = L[i]
+                    i += 1
+                    count += (len(R)-j)  #This is the most important line. This is the variation from CountInversion Question
+                else:
+                    arr[k] = R[j]
+                    j += 1    
+                k += 1
+            
+            while i < len(L):
+                arr[k] = L[i]
+                k += 1
+                i += 1   
+            while j < len(R):
+                arr[k] = R[j]
+                j += 1
+                k += 1
+                
+        return count
 
 
+#Similar Questions: 493, 315, 327 on leetcode
 
