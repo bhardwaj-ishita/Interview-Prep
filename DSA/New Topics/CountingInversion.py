@@ -38,6 +38,7 @@ It does not work for a range but a constant. For a range, we use count inversion
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#METHOD 1
 #What is merge sort?
 #It is a divide and conquer algorithm. Uses extra space. Sorts array in O(nlogn) time. First we divide and then while merging we sort.
 '''
@@ -94,6 +95,7 @@ class Solution:
 
     class Solution:
     
+    #divide
     def reversePairs(self, arr, target):
         count = 0
         if len(arr) > 1:
@@ -106,6 +108,8 @@ class Solution:
         return count
     
     def merge(self,L,R,arr,target):
+        
+        #counting inversion variation
         #finding the count
         count = 0
         i,j = 0,0
@@ -120,7 +124,7 @@ class Solution:
             i += 1
 
 
-        #sorting
+        #sort and merge
         i,j,k = 0,0,0        
         while i < len(L) and j < len(R):    
             if L[i] < R[j]:
@@ -141,6 +145,19 @@ class Solution:
             k += 1
                 
         return count
+  
+-----------------------------------------------------------------------------------------------------------------------------------
+
+#METHOD 2:
+#AVL or Self Balancing BST
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+#METHOD 3:
+#BIT
 
 
 #Similar Questions: 493, 315, 327 on leetcode
