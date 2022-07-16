@@ -5,31 +5,31 @@ class Solution:
 		    start = 0
 		    end = n-1
 		    ans = -1
-    		while start <= end:
-    		    mid = (start + end)//2
-    		    if arr[mid] == x:
-    		        ans = mid
-    		        end = mid - 1
-    	        elif arr[mid] > x:
-    	            end = mid - 1
-                else:
-                    start = mid + 1
-            return ans
+		while start <= end:
+		    mid = (start + end)//2
+		    if arr[mid] == x:
+			ans = mid
+			end = mid - 1
+		elif arr[mid] > x:
+		    end = mid - 1
+		else:
+		    start = mid + 1
+	    return ans
             
-        def right():        
-            start = 0
-    		end = n  - 1  
-    		ans = -1
-            while start <= end:
-    		    mid = (start + end)//2
-    		    if arr[mid] == x:
-    		        ans = mid
-    		        start = mid + 1
-    	        elif arr[mid] > x:
-    	            end = mid - 1
-                else:
-                    start = mid + 1
-            return ans
+		def right():        
+		    start = 0
+		    end = n  - 1  
+		    ans = -1
+		    while start <= end:
+			    mid = (start + end)//2
+			    if arr[mid] == x:
+				ans = mid
+				start = mid + 1
+			elif arr[mid] > x:
+			    end = mid - 1
+			else:
+			    start = mid + 1
+		    return ans
         
         i = right()
         j = left()
