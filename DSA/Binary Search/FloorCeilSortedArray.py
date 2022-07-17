@@ -23,3 +23,25 @@ class Solution:
                 j = m-1
         
         return ans
+    
+    
+#Ceil of the element given in sorted array
+import sys
+class Solution:
+    def findCeil(self,a,N,x):
+        #Your code here
+        i = 0
+        j = N-1
+        ans = sys.maxsize
+        while i <= j:
+            m = i + ((j-i)//2)
+            if a[m] >= x:
+                ans = min(ans, m)
+                j = m - 1
+            elif a[m] < x:
+                i = m+1
+        
+        if ans == sys.maxsize:
+            return -1
+        return ans
+
