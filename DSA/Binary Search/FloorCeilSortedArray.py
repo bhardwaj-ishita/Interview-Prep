@@ -13,16 +13,16 @@ class Solution:
         #Your code here
         i = 0
         j = N-1
-        ans = -1
         while i <= j:
             m = i + ((j-i)//2)
             if a[m] <= x:
-                ans = max(ans, m)
                 i = m + 1
             elif a[m] > x:
                 j = m-1
         
-        return ans
+        return a[j]
+    #You'll notice here that we return starting index. This is because when you run normal BS, when the condition i <= j fails, i points towards the greater neighbour
+    #Simila is the case for j, jth index points towards the smaller neighbour. This is when the key/target is not present
     
     
 #Ceil of the element given in sorted array
