@@ -37,3 +37,22 @@ class Solution:
             a[k] = right[j]
             j+=1
             k+=1
+            
+#In complex recursion way: Just to understand recursion
+
+def sort(self, arr):
+    if len(arr) == 1 or arr is None:
+        return arr
+    temp = arr.pop()
+    self.solve(arr)
+    self.insert(arr,temp)
+    return arr
+
+def insert(self, arr, temp):
+    if temp >= arr[-1] or len(arr) == 0:
+        arr.append(temp)
+        return 
+    val = arr.pop()
+    self.insert(arr,temp)
+    arr.append(val)
+    return
