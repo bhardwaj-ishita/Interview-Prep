@@ -41,18 +41,30 @@ class Solution:
 #In complex recursion way: Just to understand recursion
 
 def sort(self, arr):
+    
+    #Base Condition
     if len(arr) == 1 or arr is None:
         return arr
+    
+    #Hypothesis
     temp = arr.pop()
     self.solve(arr)
+    
+    #Induction
     self.insert(arr,temp)
     return arr
 
 def insert(self, arr, temp):
+    
+    #Base Condition
     if temp >= arr[-1] or len(arr) == 0:
         arr.append(temp)
         return 
+    
+    #Hypothesis
     val = arr.pop()
     self.insert(arr,temp)
+    
+    #Induction
     arr.append(val)
     return
