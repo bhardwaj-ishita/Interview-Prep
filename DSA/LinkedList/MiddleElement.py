@@ -7,3 +7,9 @@ class Solution:
             return slow
         
         return self.mid(fast.next.next,slow.next)
+    
+    
+    
+#Something I never realized is that linked list are like skewed trees, a node have only one child.
+#So using recursion should be very natural to use
+
