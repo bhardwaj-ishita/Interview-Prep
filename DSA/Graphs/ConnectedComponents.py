@@ -22,26 +22,3 @@ class Solution:
       if not visited[nodes]:
         self.dfs(nodes,visited,adj)
     return
-  
-  
-  '''
-  DFS traversal in adjacency matrix
-  '''
-  
-  class Solution:
-    def findCircleNum(self, isConnected: List[List[int]]) -> int:
-        V = len(isConnected[0])
-        count = 0
-        visited = [False for _ in range(V)]
-        for i in range(V):
-            if not visited[i]:
-                count+=1
-                self.dfs(i,visited,isConnected)
-        return count
-    
-    def dfs(self,n,visited,graph):
-        visited[n] = True
-        for i in range(len(visited)):
-            if graph[n][i] == 1 and not visited[i]:
-                self.dfs(i,visited,graph)
-        return 
