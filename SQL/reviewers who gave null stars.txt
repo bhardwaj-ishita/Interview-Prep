@@ -1,0 +1,9 @@
+select rev.reviewer_name from reviewers rev
+join ratings rat
+on rev.reviewer_id = rat.reviewer_id
+where rat.reviewer_stars is NULL
+
+
+ouptut wanted reviewer name from the reviewers table
+for every movie rating there is a reviewer, so join them
+in this joined table get reviewer name where reviewer stars is NULL
