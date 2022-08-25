@@ -1,0 +1,35 @@
+SELECT CONCAT_WS(',',d.DepartmentName,s.Name,s.GPA) as A
+from Students s
+join Departments d
+on s.DepartmentID = d.DepartmentID
+where (s.DepartmentID, s.GPA) in
+    (select DepartmentID,min(GPA) as GPA 
+    from Students 
+    group by DepartmentID)
+    
+/*the concat_ws is used to store different fields in one column with commas to seperate eg: field1,field2,field3*/
+/*In the inner query we take department id and min of gpa grouped by department id*/
+/*That is for each department id, we want the department id and min(gpa)*/
+/*We get the result from inner query as department id and min gpa*/
+/*in this table we will have distinct results of min(gpa) for each department*/
+/*we will join this inner query resultant table with department table where ids are matching which will be matching for all*/
+/*and take out values and make a column with DepartmentName, StudentsName, GPA out of the above joined table*/
+
+
+
+/*To get min(GPA) for each department*/
+SELECT DepartmentID,min(GPA) as GPA 
+FROM Students 
+GROUP BY DepartmentID
+
+/*To order them by department name, by default ascending order of the department names*/
+(query) ORDERE BY DepartmentName
+
+/*To get values as output from different table too you join the tables*/
+SELECT CONCAT_WS(',',d.DepartmentName,s.Name,s.GPA) as A
+FROM Students s
+JOIN Departments d
+ON s.DepartmentID = d.DepartmentID
+
+/*To connect the inner and outer query now*/
+[OUTER QUERY] WHERE (s.DepartmentID, s.GPA) IN [INNER QUERY]
