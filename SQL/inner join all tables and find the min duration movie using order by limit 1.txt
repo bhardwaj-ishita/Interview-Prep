@@ -1,0 +1,11 @@
+
+select mov.movie_title as movie_title, mov.movie_year as movie_year, concat_ws('',dir.director_first_name,dir.director_last_name) as director_name,
+concat_ws('',act.actor_first_name,act.actor_last_name) as actor_name , mc.role as role
+from movies mov
+inner join movies_directors md on md.movie_id = mov.movie_id
+inner join directors dir on dir.director_id = md.director_id
+inner join movies_cast mc on mc.movie_id = mov.movie_id
+inner join actors act on act.actor_id = mc.actor_id 
+order by mov.movie_time limit 1
+
+
