@@ -1,0 +1,23 @@
+select concat_ws('',dir.director_first_name,director_last_name), mov.movie_title
+from movies_directors md
+join directors dir on dir.director_id = md.director_id
+join movies mov on mov.movie_id = md.movie_id
+join movies_cast mc on mc.movie_id = mov.movie_id 
+where movies_cast.role = 'SeanMaguire'
+
+
+
+OR
+
+
+used concat here and changed inverted commas
+we needed info from other tables hence join them
+
+
+
+select concat(dir.director_first_name,'',director_last_name), mov.movie_title
+from movies_directors md
+join directors dir on dir.director_id = md.director_id
+join movies mov on mov.movie_id = md.movie_id
+join movies_cast mc on mc.movie_id = mov.movie_id 
+where movies_cast.role = 'SeanMaguire';
