@@ -1,23 +1,18 @@
-select concat_ws('',dir.director_first_name,director_last_name), mov.movie_title
+select concat_ws('',dir.director_first_name,director_last_name) as director_name, mov.movie_title as movie_title
 from movies_directors md
 join directors dir on dir.director_id = md.director_id
 join movies mov on mov.movie_id = md.movie_id
 join movies_cast mc on mc.movie_id = mov.movie_id 
-where movies_cast.role = 'SeanMaguire'
+where mc.role = 'SeanMaguire'
 
 
-
-OR
-
-
-used concat here and changed inverted commas
+used concat_ws here 
 we needed info from other tables hence join them
+we need a particular title of the column
+
+and once variables given to tables, use the variables itself
+
+I was using movies_cast insted of mc
 
 
 
-select concat(dir.director_first_name,'',director_last_name), mov.movie_title
-from movies_directors md
-join directors dir on dir.director_id = md.director_id
-join movies mov on mov.movie_id = md.movie_id
-join movies_cast mc on mc.movie_id = mov.movie_id 
-where movies_cast.role = 'SeanMaguire';
