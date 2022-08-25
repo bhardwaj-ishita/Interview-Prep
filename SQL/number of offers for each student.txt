@@ -1,0 +1,18 @@
+select sum(if(month(Date) = '11', 1, 0)) as Job_Offers
+from Students s
+left join Jobs j 
+on j.Id = s.Id 
+group by s.Id
+order by s.Id
+
+/*
+when we left join students to jobs we take all students irrespective of if there is an id for it in Jobs or not
+so for students with no jobs job table will be null
+
+Now out of this table we group them by students id
+That is now, all the jobs will be grouped for each student 1:4 jobs relations 2:3 jobs relations
+
+Out of this we will take the sum of all the jobs with dates in month 11: if in the date there is a month november +1 else +0
+and club these sums for each student id (we grouped them for all students respectively)
+In the order of their id
+*/
