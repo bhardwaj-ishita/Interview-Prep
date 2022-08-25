@@ -1,0 +1,25 @@
+SELECT Tests.TestId 
+from Tests 
+join Tests as t
+on t.TestId = Test.TestId - 1
+where Tests.Marks > t.Marks
+
+/*Here you gave a number of tests everyday
+And the test id are random
+
+You need to output the tests where you improved from previous test performance
+
+So you output testID from Tests Table
+and because you need to compare with your previous performances itself
+you join the tabele such that the curret performance is adjacent to the previous test given
+
+Tests.TestId   Tests.marks  t.TestID  t.marks
+  50                20          -       -
+  53                35          50       20
+  55                21          53       20*/
+  
+  This will be the joined table
+  This is what happens when you join the table with Tests.TestID = t.TestID - 1
+  And in this table get testID for tests where marks are more than previous
+  Tests.Marks > t.Marks
+  */
