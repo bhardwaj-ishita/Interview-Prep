@@ -24,3 +24,24 @@ And every table selected needs its own alias
 
 alias here is a name given to the table we recieved after applying all the conditions
 */
+
+
+
+
+select movies.movie_title as movie_title 
+from movies
+where movies.movie_id in(
+    select movies_cast.movie_id 
+    from movies_cast
+    where actor_id in(
+        select actor_id from movies_cast
+        group by actor_id having count(*) >= 2
+    )
+);
+
+
+/*
+get movie title of these movie ids
+get movies id of the movies these actors have worked in 
+get actors who have have worked in 2 or more movies
+*/
