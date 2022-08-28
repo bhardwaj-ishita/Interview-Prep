@@ -1,0 +1,6 @@
+SELECT case
+when A + B + C > 0 then 'Positive'
+when A + B + C < 0 then 'Negative'
+else 'Zero'
+end as A
+from NUMBERS;
