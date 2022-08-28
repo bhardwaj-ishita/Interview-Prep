@@ -1,0 +1,26 @@
+select sum(distinct Salary) as Salary
+from (
+   select Students.Id,Students.DepartmentId,Jobs.Salary
+   from Students, Jobs 
+   where Students.Id = Jobs.Id and (
+      select DepartmentName 
+      from Departments
+      where Students.DepartmentId = Departments.DepartmentId) = 'CSE'
+) alias
+group by DepartmentId
+
+
+
+
+/*select cse department Id
+select all students with that Id
+select jobs of students with that Id
+select sum of all the jobs selected
+
+read from below to up
+
+
+And every table selected needs its own alias
+
+alias here is a name given to the table we recieved after applying all the conditions
+*/
