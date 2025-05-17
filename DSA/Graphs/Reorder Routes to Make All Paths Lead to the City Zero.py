@@ -1,3 +1,28 @@
+'''
+1) For BFS
+so the whole question is we need to check from the capital if everything is indirectly connected to each other:
+we've been given no same path is reiterated again. and there is no cycle
+Acyclic and directional
+
+So i store the edges(directional) and neighbours(bidirectional) in separate maps.
+
+you start from zero and check for all neighbours
+and for each neighbour check if the parent is in the edges:
+if yes then skip else step += 1
+also keep the nodes marked visited. because they won't be iterated again. 
+
+2) For DFS
+So, our task is to count the number of edges in a tree rooted at node '0' that are directed from the parent node to a child node.
+Every child should be able to reach the parent
+
+
+remeber in recursion, parent to child we are traversing. and we have kept that as positive. 
+But we should be able to reach from the child to the parent
+so if node>0
+then step +=1
+
+'''
+
 from collections import deque
 class Solution(object):
     def minReorder(self, n, connections):
