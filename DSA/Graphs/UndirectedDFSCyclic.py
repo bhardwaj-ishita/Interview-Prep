@@ -10,8 +10,8 @@ class Solution:
 		            ans = dfs(node,neigh)
 		            if ans:
 		                return True
-	            elif neigh != parent and visited[neigh] == 1:
-                    return True
+	            	elif neigh != parent and visited[neigh] == 1:
+                    		return True
 		
 		graph = [[] for _ in range(V)]
 		for u,v in edges:
