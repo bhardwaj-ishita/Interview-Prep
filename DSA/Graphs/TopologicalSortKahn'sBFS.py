@@ -43,3 +43,40 @@ hence return []
         if y != V:
             return []
         return order
+
+####TS output true or false (no cycle detection)
+from collections import deque
+class Solution:
+    
+    def topoSort(self, V, edges):
+        # Code here
+        
+        graph = [[] for _ in range(V)]
+        indegree = [0]*V
+        for x,y in edges:
+            graph[x].append(y)
+        
+        #make indegree array    
+        for i in graph:
+            for j in i:
+                indegree[j]+=1
+        
+        #append nodes which have indegree 0
+        q = deque()
+        for i in range(V):
+            if indegree[i] == 0:
+                q.append(i)
+        
+        ans = []
+        while(q):
+            node = q.pop()
+            ans.append(node)
+            for neigh in graph[node]:
+                indegree[neigh] -= 1
+                if indegree[neigh] == 0:
+                    q.append(neigh)
+                
+        return ans
+        
+        
+        
