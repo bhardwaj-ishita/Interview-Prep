@@ -23,3 +23,44 @@ class Solution:
                 
         order[pos] = node
         return pos - 1
+
+
+#latest addition 13/07
+from collections import deque
+class Solution:
+    '''
+    Operation	    Description	Time Complexity
+    append(x)	    Adds x to the right end of the deque.	                        O(1)
+    appendleft(x)	Adds x to the left end of the deque.	                        O(1)
+    pop()	        Removes and returns an element from the right end of the deque.	O(1)
+    popleft()	    Removes and returns an element from the left end of the deque.	O(1)
+    '''
+    def topoSort(self, V, edges):
+        # Code here
+        
+        def dfs(node):
+            visited[node] = 1
+            for neigh in graph[node]:
+                if not visited[neigh]:
+                    dfs(neigh)
+            
+            q.appendleft(node)
+        
+        graph = [[] for _ in range(V)]
+        visited = [0]*V
+        for x,y in edges:
+            graph[x].append(y)
+            
+        q = deque()
+        for node in range(V):
+            if not visited[node]:
+                dfs(node)
+        
+        ans = []
+        for i in range(len(q)):
+            ans.append(q.popleft())
+            
+        return ans
+          
+        
+        
